@@ -16,8 +16,6 @@ exports.add_user = [
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
-    console.log('am I here?');
-
     // Create Author object with escaped and trimmed data
     const user = new User({
       name: req.body.name,

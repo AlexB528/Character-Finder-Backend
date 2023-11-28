@@ -5,11 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require("body-parser");
-const passport = require("passport");
 const compression = require("compression");
 const helmet = require("helmet");
 const RateLimit = require("express-rate-limit");
-
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
