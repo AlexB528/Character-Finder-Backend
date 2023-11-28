@@ -10,7 +10,6 @@ const helmet = require("helmet");
 const RateLimit = require("express-rate-limit");
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
@@ -54,7 +53,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
