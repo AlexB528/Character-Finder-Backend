@@ -6,7 +6,6 @@ const logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require("body-parser");
 const passport = require("passport");
-const jwtStrategy  = require("./strategies/jwt")
 const compression = require("compression");
 const helmet = require("helmet");
 const RateLimit = require("express-rate-limit");
@@ -43,12 +42,8 @@ app.use(helmet());
 
 app.use(cors());
 
-
-
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
-passport.use(jwtStrategy); // maybe this should be higher up
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
